@@ -37,9 +37,14 @@ h2 + p {
   padding-bottom: 50px;
   position: relative;
   box-shadow:
-    0 8px 0 0 #2d3945,
-    0 12px 0 0 #ffffff,
-    0 14px 0 0 #2d3945;
+    0 4px 0 0 #2d3945,
+    0 7px 0 0 #ffffff,
+    0 9px 0 0 #2d3945;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact,
@@ -48,18 +53,10 @@ h2 + p {
   margin: 50px 0;
   padding: 0;
   text-align: left;
-  display: flex;
-  flex-direction: column;
 }
 
 select {
-  height: 50px;
   cursor: pointer;
-}
-
-.select-menu {
-  color: #000000;
-  padding: 10px 12px;
 }
 
 legend {
@@ -94,7 +91,7 @@ header {
 }
 
 .contact input,
-.contact select,
+.state-menu select,
 .newsletter textarea {
   height: 60px;
   padding: 20px;
@@ -104,6 +101,34 @@ header {
   color: #495d70;
 }
 
+.state-menu {
+  position: relative;
+}
+
+.state-menu:after {
+  content: '';
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  background: url('../images/select-arrows.svg') 0 0 no-repeat;
+  top: 20px;
+  right: 5px;
+  display: inline-block;
+}
+
+.state-menu select {
+    display: block;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.state-menu {
+  position: relative;
+}
+
+
 select:required:invalid {
   color: #9da3a8;
 }
@@ -112,7 +137,7 @@ option[value=""][disabled] {
   display: none;
 }
 
-.contact .zip {
+.zip input {
   width: 50%;
 }
 
@@ -136,8 +161,6 @@ option[value=""][disabled] {
 }
 
 .comment {
-  display: flex;
-  flex-direction: column;
   padding-top: 20px;
 }
 
@@ -175,24 +198,25 @@ footer {
     margin: auto;
   }
 
-  .contact {
+  .flex {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
   }
 
-  .contact label {
+  .flex label {
     flex-basis: 25%;
   }
 
-  .contact input,
-  .contact select {
+  .flex .state-menu,
+  .flex input {
     flex-basis: 75%;
     margin: 20px 0;
   }
 
-  .contact .zip {
+  .zip input {
     flex-basis: 25%;
   }
+
 
 }
