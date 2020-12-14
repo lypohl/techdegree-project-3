@@ -35,7 +35,6 @@ h2 + p {
   text-align: center;
   color: #9da3a8;
   padding-bottom: 50px;
-  position: relative;
   box-shadow:
     0 4px 0 0 #2d3945,
     0 7px 0 0 #ffffff,
@@ -51,7 +50,6 @@ h2 + p {
 .newsletter {
   border: none;
   margin: 50px 0;
-  padding: 0;
   text-align: left;
 }
 
@@ -101,6 +99,14 @@ header {
   color: #495d70;
 }
 
+.state-menu select {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .state-menu {
   position: relative;
 }
@@ -115,19 +121,6 @@ header {
   right: 5px;
   display: inline-block;
 }
-
-.state-menu select {
-    display: block;
-    width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-.state-menu {
-  position: relative;
-}
-
 
 select:required:invalid {
   color: #9da3a8;
@@ -151,13 +144,13 @@ option[value=""][disabled] {
   padding: 20px 0 5px 0;
 }
 
+.newsletter input {
+  margin-right: 15px;
+}
+
 .newsletter label {
   display: inline-block;
   padding: 5px 0;
-}
-
-.newsletter input {
-  margin-right: 15px;
 }
 
 .comment {
@@ -200,7 +193,6 @@ footer {
 
   .flex {
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -208,8 +200,8 @@ footer {
     flex-basis: 25%;
   }
 
-  .flex .state-menu,
-  .flex input {
+  .flex input,
+  .flex .state-menu  {
     flex-basis: 75%;
     margin: 20px 0;
   }
@@ -217,6 +209,5 @@ footer {
   .zip input {
     flex-basis: 25%;
   }
-
 
 }
