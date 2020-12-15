@@ -62,6 +62,17 @@ legend {
   font-weight: 700;
 }
 
+.contact input,
+.state-menu select,
+.newsletter textarea {
+  height: 60px;
+  padding: 20px;
+  background-color: #efefef;
+  border: none;
+  border-radius: 6px;
+  color: #495d70;
+}
+
 input::placeholder {
   font-style: italic;
   color: #adb2b7;
@@ -69,34 +80,25 @@ input::placeholder {
   font-size: 0.75rem;
 }
 
-:focus {
+input:focus,
+textarea:focus {
   outline: none;
   box-shadow: 0 0 0 3px #46698b;
+  background-color: #ffffff;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease;
 }
-
-/*  Layout Styles  */
 
 .container {
   padding: 0 20px;
 }
 
-header {
+header,
+footer {
   background-color: #2d3945;
 }
 
 .contact label {
   padding: 20px 0 10px 0;
-}
-
-.contact input,
-.state-menu select,
-.newsletter textarea {
-  height: 60px;
-  padding: 20px;
-  background-color: #eff0f1;
-  border: none;
-  border-radius: 6px;
-  color: #495d70;
 }
 
 .state-menu select {
@@ -177,9 +179,10 @@ button {
 
 footer {
   font-style: italic;
-  color: #a4a9ae;
+  color: #ffffff;
   text-align: center;
-  margin: 50px 0;
+  margin: 50px 0 0 0;
+  padding: 30px 0;
 }
 
 /*  Media Queries  */
